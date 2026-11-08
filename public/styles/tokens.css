@@ -1,6 +1,15 @@
 
 :root {
+    --primary-color: #7C0E44;
+    --secondary-color: #AA5E7A;
 
+    --color-text-primary: #D49A9A;
+    --color-text-secondary: #F2DACE;
+
+    --color-border-primary: #F2DACE;
+
+    --font-title-h1: "Russo One";
+    --font-primary: "Average Sans";
 
     --space-2xs: 0.25rem;
     --space-xs: calc(var(--space-2xs) * 2);
@@ -24,6 +33,7 @@
     --font-size-xs: calc(var(--font-size-xxs) * 1.25);
     --font-size-s: calc(var(--font-size-xxs) * 1.5);
     --font-size-m: calc(var(--font-size-xxs) * 2);
+    --font-size-xm: calc(var(--font-size-xxs) * 2.5);
     --font-size-l: calc(var(--font-size-xxs) * 3);
     --font-size-xl: calc(var(--font-size-xxs) * 4);
     --font-size-xxl: calc(var(--font-size-xxs) * 6);

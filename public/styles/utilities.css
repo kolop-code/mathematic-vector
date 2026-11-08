@@ -1,0 +1,38 @@
+
+.u-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.u-mt-2xs {
+    margin-top: var(--space-2xs);
+}
+
+.u-mt-xs {
+    margin-top: var(--space-xs);
+}
+
+.u-mt-s {
+    margin-top: var(--space-s);
+}
+
+.u-mt-m {
+    margin-top: var(--space-m);
+}
+
+.u-mt-l {
+    margin-top: var(--space-l);
+}
+
+.u-mt-xl {
+    margin-top: var(--space-xl);
+}
+
+.u-mt-xxl {
+    margin-top: var(--space-xxl);
+}
+
+.u-hidden {
+    visibility: hidden;
+}
