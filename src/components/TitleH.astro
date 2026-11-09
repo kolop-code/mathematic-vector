@@ -1,0 +1,38 @@
+---
+import type {IntRange} from "../../public/ts/Utilities.ts";
+interface Props {
+    level: IntRange<1, 6>,
+    classes?: string[]
+}
+
+const {level, classes} = Astro.props;
+
+function NumEqual(num1: number, num2: number) {
+    return num1 === num2;
+}
+---
+
+{NumEqual(level, 1) && (
+<h1 class:list={[{"title__h1": true}, classes]}>
+    <slot/>
+</h1>)}
+{NumEqual(level, 2) && (
+<h2 class:list={[{"title__h2": true}, classes]}>
+    <slot/>
+</h2>)}
+{NumEqual(level, 3) && (
+<h3 class:list={[{"title__h3": true}, classes]}>
+    <slot/>
+</h3>)}
+{NumEqual(level, 4) && (
+<h4 class:list={[{"title__h4": true}, classes]}>
+    <slot/>
+</h4>)}
+{NumEqual(level, 5) && (
+<h5 class:list={[{"title__h5": true}, classes]}>
+    <slot/>
+</h5>)}
+{NumEqual(level, 6) && (
+<h6 class:list={[{"title__h6": true}, classes]}>
+    <slot/>
+</h6>)}

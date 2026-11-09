@@ -1,0 +1,35 @@
+---
+import TitleH from "./TitleH.astro";
+interface Props {
+    path: string
+}
+
+const {path} = Astro.props;
+
+const files = import.meta.glob(
+    "/public/json/topics/vectors/**/*.json",
+    {
+        eager: true,
+        import: "default"
+    }
+);
+
+const data: any[] = [];
+for (const [path, content] of Object.entries(files)) {
+    const parts = path
+        .replace(".json", "")
+        .split("/");
+    const name = parts[parts.length - 1];
+    if (name === "main") {continue;}
+    data.push({file_name: name, content: content})
+}
+
+---
+
+<div class="list">
+    {data.map((_, i) =>
+            <div class="list__card">
+                <TitleH level={3}>{data[i].content.general.title}</TitleH>
+            </div>
+    )}
+</div>

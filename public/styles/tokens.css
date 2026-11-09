@@ -5,11 +5,12 @@
 
     --color-text-primary: #D49A9A;
     --color-text-secondary: #F2DACE;
+    --color-text-secondary-contrast: #000;
 
     --color-border-primary: #F2DACE;
 
     --font-title-h1: "Russo One";
-    --font-primary: "Average Sans";
+    --font-primary: Arial, Helvetica;
 
     --space-2xs: 0.25rem;
     --space-xs: calc(var(--space-2xs) * 2);

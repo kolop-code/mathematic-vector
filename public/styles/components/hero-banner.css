@@ -30,9 +30,10 @@
 }
 
 .hero-banner__menu-toggle {
+    display: none;
     position: relative;
     aspect-ratio: 1 / 1;
-    height: 1.5rem;
+    height: 2rem;
     align-self: center;
     margin-left: auto;
 
@@ -52,5 +53,39 @@
 }
 
 @media (width < 768px) {
+    .hero-banner {
+        display: grid;
+        grid-template-areas: "logo toggle" "navbar navbar";
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto;
+    }
 
+    .hero-banner__title {
+        grid-area: logo;
+    }
+
+    .hero-banner__menu-toggle {
+        grid-area: toggle;
+        display: block;
+    }
+
+    .hero-banner__navbar {
+        grid-area: navbar;
+        display: none;
+        margin: 0;
+        padding: 0 var(--space-s);
+    }
+
+    .hero-banner__list {
+        flex-direction: column;
+        padding: var(--space-s) 0;
+    }
+
+    .hero-banner__action {
+        font-size: var(--font-size-l);
+    }
+
+    #hamburger-menu:checked ~ .hero-banner__navbar {
+        display: block;
+    }
 }

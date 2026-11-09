@@ -2,6 +2,8 @@
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroBanner from "../../components/HeroBanner.astro";
+import TitleH from "../../components/TitleH.astro";
+import List from "../../components/List.astro";
 
 ---
 
@@ -10,7 +12,8 @@ import HeroBanner from "../../components/HeroBanner.astro";
         <HeroBanner></HeroBanner>
     </header>
     <main>
-
+        <TitleH level={2} classes={["u-pub-m"]}>Témata</TitleH>
+        <List path="/pubic/json/topics/vectors"></List>
     </main>
     <footer>
 

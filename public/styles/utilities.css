@@ -1,4 +1,8 @@
 
+.u-test {
+    color: red;
+}
+
 .u-center {
     display: flex;
     align-items: center;
@@ -35,4 +39,28 @@
 
 .u-hidden {
     visibility: hidden;
+}
+/* padding up bottom */
+.u-pub-2xs {
+    padding: var(--space-2xs) 0;
+}
+
+.u-pub-xs {
+    padding: var(--space-xs) 0;
+}
+
+.u-pub-s {
+    padding: var(--space-s) 0;
+}
+
+.u-pub-m {
+    padding: var(--space-m) 0;
+}
+
+.u-pub-l {
+    padding: var(--space-l) 0;
+}
+
+.u-pub-xl {
+    padding: var(--space-xl) 0;
 }
