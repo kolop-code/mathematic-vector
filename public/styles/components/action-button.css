@@ -5,4 +5,5 @@
     color: var(--color-text-secondary);
     font-family: var(--font-primary), sans-serif;
     font-size: var(--font-size-xm);
+    cursor: pointer;
 }

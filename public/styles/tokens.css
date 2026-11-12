@@ -1,13 +1,15 @@
 
 :root {
-    --primary-color: #7C0E44;
-    --secondary-color: #AA5E7A;
+    --primary-color: #6A795D;/*#7C0E44;*/
+    --secondary-color: #8E9162;/*#AA5E7A;*/
 
-    --color-text-primary: #D49A9A;
-    --color-text-secondary: #F2DACE;
-    --color-text-secondary-contrast: #000;
+    --color-background: #b8c199;
 
-    --color-border-primary: #F2DACE;
+    --color-text-primary: #B2BD7E;/*#D49A9A;*/
+    --color-text-secondary: #D9D28B;/*#F2DACE;*/
+    --color-text-secondary-contrast: #6A795D;
+
+    --color-border-primary: var(--primary-color);/*#F2DACE;*/
 
     --font-title-h1: "Russo One";
     --font-primary: Arial, Helvetica;

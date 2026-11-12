@@ -4,6 +4,7 @@ body {
     flex-direction: column;
     font-family: var(--font-primary), sans-serif;
     font-size: var(--font-size-s);
+    background: var(--color-background);
 }
 
 header {

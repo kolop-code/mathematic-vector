@@ -1,0 +1,33 @@
+
+.markdown {
+    font-family: var(--font-primary), sans-serif;
+    color: var(--color-text-secondary-contrast);
+
+    & hr {
+        background: var(--color-text-secondary-contrast);
+    }
+}
+
+.markdown p {
+    font-size: var(--font-size-xm);
+}
+
+.markdown .katex-html {
+    display: none;
+}
+
+.markdown .katex-mathml {
+    font-size: var(--font-size-xm);
+}
+
+.markdown h1 {
+    font-size: var(--font-size-xxl);
+}
+
+.markdown h2 {
+    font-size: var(--font-size-xl);
+}
+
+.markdown h3 {
+    font-size: var(--font-size-l);
+}

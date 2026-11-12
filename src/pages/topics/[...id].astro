@@ -1,0 +1,39 @@
+---
+// import 'katex/dist/katex.min.css';
+
+import { getCollection, render } from 'astro:content';
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroBanner from "../../components/HeroBanner.astro";
+
+export async function getStaticPaths() {
+    const topics = await getCollection('topics');
+
+    return topics.map((topic) => ({
+        params: {
+            id: topic.id
+        },
+        props: {
+            topic
+        }
+    }));
+}
+
+const {topic} = Astro.props;
+
+const {Content} = await render(topic);
+
+//const {title, description, hero, order} = topics.data;
+
+---
+
+<BaseLayout>
+    <header>
+        <HeroBanner></HeroBanner>
+    </header>
+    <main>
+        <article class="markdown">
+            <Content />
+        </article>
+    </main>
+</BaseLayout>

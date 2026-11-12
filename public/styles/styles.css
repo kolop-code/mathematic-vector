@@ -8,4 +8,6 @@
 @import url(components/btn.css) layer(components);
 @import url(components/title-h.css) layer(components);
 @import url(components/hero-banner.css) layer(components);
+@import url(components/list.css) layer(components);
+@import url(components/markdown.css) layer(components);
 @import url(utilities.css) layer(utilities);

@@ -1,0 +1,35 @@
+
+/* ⮞⮟ */
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-s);
+    overflow: hidden;
+}
+
+.list__card {
+    border: var(--border-width-2) solid var(--color-border-primary);
+    border-radius: var(--corner-radius-2);
+    overflow: hidden;
+}
+
+.list__card-title {
+    font-size: var(--font-size-xm);
+    padding: var(--space-xs) var(--space-xs) var(--space-xs) var(--space-m);
+    color: var(--color-text-secondary);
+    background: var(--primary-color);
+    border-bottom: var(--border-width-2) solid var(--color-border-primary);
+}
+
+.list__card-subtitle {
+    color: var(--color-text-secondary-contrast);
+    padding-left: var(--space-xl);
+}
+
+.list__container {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-xs);
+    padding: var(--space-s) 0;
+}
+
