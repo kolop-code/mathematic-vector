@@ -1,5 +1,5 @@
 
-@layer reset, tokens, base, components, utilities;
+@layer reset, tokens, base, components, utilities, theme;
 
 @import url(reset.css) layer(reset);
 @import url(tokens.css) layer(tokens);
@@ -11,3 +11,4 @@
 @import url(components/list.css) layer(components);
 @import url(components/markdown.css) layer(components);
 @import url(utilities.css) layer(utilities);
+@import url(theme/theme-1.css) layer(theme);

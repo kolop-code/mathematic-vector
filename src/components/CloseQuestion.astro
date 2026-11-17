@@ -1,0 +1,30 @@
+---
+import {renderMath} from "../../public/ts/Utilities.ts";
+
+interface Answer {
+    char: string,
+    text: string
+}
+
+interface Props {
+    title: string,
+    answers: Answer[]
+}
+
+const {title, answers} = Astro.props;
+---
+
+<fieldset>
+    <legend>
+        <div set:html={renderMath(title)}></div>
+    </legend>
+    {
+        answers.map(async (answer, i) =>
+                <label for=`question_${i}`>
+                    <input type="radio" id=`question_${i}` value={answer.char}
+                           set:html={answer.char + ". " +await renderMath(answer.text)}
+                    name=`question`/>
+                </label>
+        )
+    }
+</fieldset>

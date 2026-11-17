@@ -1,5 +1,4 @@
 
-/* ⮞⮟ */
 .list {
     display: flex;
     flex-direction: column;
@@ -8,7 +7,7 @@
 }
 
 .list__card {
-    border: var(--border-width-2) solid var(--color-border-primary);
+    border: var(--border-width-2) solid var(--color-border-secondary);
     border-radius: var(--corner-radius-2);
     overflow: hidden;
 }
@@ -18,7 +17,7 @@
     padding: var(--space-xs) var(--space-xs) var(--space-xs) var(--space-m);
     color: var(--color-text-secondary);
     background: var(--primary-color);
-    border-bottom: var(--border-width-2) solid var(--color-border-primary);
+    border-bottom: var(--border-width-2) solid var(--color-border-secondary);
 }
 
 .list__card-subtitle {
@@ -31,5 +30,13 @@
     flex-direction: column;
     gap: var(--space-xs);
     padding: var(--space-s) 0;
+}
+
+.list__card--short {
+    border: none;
+}
+
+.list__card-title--short {
+    border-radius: var(--corner-radius-2);
 }
 

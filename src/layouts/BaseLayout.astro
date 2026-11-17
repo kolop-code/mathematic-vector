@@ -1,5 +1,12 @@
 ---
 
+interface Props {
+    classes?: string
+}
+
+const { classes } = Astro.props;
+
+const classes_list = classes === undefined ? [] : classes.split(" ");
 
 ---
 
@@ -17,7 +24,7 @@
     <meta name="generator" content={Astro.generator}/>
     <title>Mathematics Vector</title>
 </head>
-<body>
+<body class:list={classes_list}>
 <slot/>
 </body>
 </html>

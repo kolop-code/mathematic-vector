@@ -1,0 +1,26 @@
+{
+  "title": "Funkce 1",
+  "order": 1,
+  "questions": [
+    {
+      "type": "close",
+      "question": "Kolik ti je let?",
+      "order": 1,
+      "answers": [
+        {
+          "char": "a",
+          "text": "<18 let"
+        },
+        {
+          "char": "b",
+          "text": "18-26 let"
+        },
+        {
+          "char": "c",
+          "text": ">26 let"
+        }
+      ],
+      "right_answer": "b"
+    }
+  ]
+}

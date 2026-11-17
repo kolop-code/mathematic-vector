@@ -8,8 +8,17 @@
     }
 }
 
+.markdown ul {
+    padding-left: var(--space-l);
+}
+
+.markdown li {
+    font-size: var(--font-size-xm);
+}
+
 .markdown p {
     font-size: var(--font-size-xm);
+    line-height: 1.2em;
 }
 
 .markdown .katex-html {
@@ -30,4 +39,12 @@
 
 .markdown h3 {
     font-size: var(--font-size-l);
+}
+
+.markdown h1, h2, h3 {
+    padding: var(--space-m) 0;
+}
+
+.markdown math {
+    padding: var(--space-l) 0;
 }

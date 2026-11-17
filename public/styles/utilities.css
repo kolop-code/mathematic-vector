@@ -64,3 +64,11 @@
 .u-pub-xl {
     padding: var(--space-xl) 0;
 }
+
+.u-pt-l {
+    padding-top: var(--space-l);
+}
+
+.u-pb-l {
+    padding-bottom: var(--space-l);
+}

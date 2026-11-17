@@ -1,0 +1,21 @@
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroBanner from "../../components/HeroBanner.astro";
+import List from "../../components/List.astro";
+import TitleH from "../../components/TitleH.astro";
+
+---
+
+<BaseLayout>
+    <header>
+        <HeroBanner></HeroBanner>
+    </header>
+    <main>
+        <TitleH level={2} classes="u-pub-m">Autotesty</TitleH>
+        <List short_variant={false} collection_name="autotests"></List>
+    </main>
+    <footer>
+
+    </footer>
+</BaseLayout>

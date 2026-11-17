@@ -1,0 +1,41 @@
+---
+
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HeroBanner from "../../components/HeroBanner.astro";
+import List from "../../components/List.astro";
+import {getCollection} from "astro:content";
+import TitleH from "../../components/TitleH.astro";
+import Autotest from "../../components/Autotest.astro";
+
+export async function getStaticPaths() {
+    const autotests = await getCollection('autotests');
+
+    return autotests.map((autotest) => ({
+        params: {
+            id: autotest.id
+        },
+        props: {
+            autotest
+        }
+    }));
+}
+
+const {autotest} = Astro.props;
+
+---
+
+<BaseLayout classes="content-view">
+    <header>
+        <HeroBanner></HeroBanner>
+    </header>
+    <main>
+        <TitleH level={2}>{autotest.data.title}</TitleH>
+        <Autotest autotests={autotest.data}></Autotest>
+    </main>
+    <aside>
+        <List short_variant={true} collection_name="autotests"></List>
+    </aside>
+    <footer>
+
+    </footer>
+</BaseLayout>

@@ -1,0 +1,13 @@
+
+html.theme-1 {
+    --primary-color: #607e46;/*#7C0E44;*/
+    --secondary-color: #8E9162;/*#AA5E7A;*/
+
+    --color-background: #bdbfa1;
+
+    --color-text-primary: #b9c56d;/*#D49A9A;*/
+    --color-text-secondary: #D9D28B;/*#F2DACE;*/
+    --color-text-secondary-contrast: #728858;
+
+    --color-border-primary: var(--primary-color);/*#F2DACE;*/
+}

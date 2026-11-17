@@ -5,6 +5,7 @@ import { getCollection, render } from 'astro:content';
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroBanner from "../../components/HeroBanner.astro";
+import List from '../../components/List.astro';
 
 export async function getStaticPaths() {
     const topics = await getCollection('topics');
@@ -23,11 +24,9 @@ const {topic} = Astro.props;
 
 const {Content} = await render(topic);
 
-//const {title, description, hero, order} = topics.data;
-
 ---
 
-<BaseLayout>
+<BaseLayout classes="content-view">
     <header>
         <HeroBanner></HeroBanner>
     </header>
@@ -36,4 +35,10 @@ const {Content} = await render(topic);
             <Content />
         </article>
     </main>
+    <aside>
+        <List short_variant={true} collection_name="topics"></List>
+    </aside>
+    <footer>
+
+    </footer>
 </BaseLayout>

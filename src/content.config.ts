@@ -1,6 +1,7 @@
 import { defineCollection} from 'astro:content';
 import { glob } from 'astro/loaders';
 import { z } from 'astro/zod';
+import {schema} from "../public/ts/Utilities.ts";
 
 const topics = defineCollection({
     loader: glob({
@@ -14,4 +15,13 @@ const topics = defineCollection({
     })
 });
 
-export const collections = { topics };
+const autotests = defineCollection({
+    loader: glob({
+        pattern: '**/*.json',
+        base: "./src/content/autotests"
+    }),
+
+    schema: schema
+})
+
+export const collections = { topics, autotests };

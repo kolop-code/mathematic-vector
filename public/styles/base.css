@@ -2,9 +2,17 @@
 body {
     display: flex;
     flex-direction: column;
+    height: 100vh;
     font-family: var(--font-primary), sans-serif;
     font-size: var(--font-size-s);
     background: var(--color-background);
+}
+
+body.content-view {
+    display: grid;
+    grid-template-areas: "header header" "aside main" "footer footer";
+    grid-template-columns: 19rem 1fr;
+    grid-template-rows: auto 1fr auto;
 }
 
 header {
@@ -18,4 +26,22 @@ main {
 
 footer {
 
+}
+
+.content-view header {
+    grid-area: header;
+}
+
+.content-view main {
+    grid-area: main;
+    padding: 0 10% 0 2.5%;
+}
+
+.content-view aside {
+    grid-area: aside;
+    padding: var(--space-s) 2.5% var(--space-s) 5%;
+}
+
+.content-view footer {
+    grid-area: footer;
 }
