@@ -8,22 +8,24 @@ interface Answer {
 
 interface Props {
     title: string,
+    question_number: number,
     answers: Answer[]
 }
 
-const {title, answers} = Astro.props;
+const {title, answers, question_number} = Astro.props;
 ---
 
-<fieldset>
-    <legend>
-        <div set:html={renderMath(title)}></div>
+<fieldset class="close-question">
+    <legend set:html={renderMath((question_number + 1) + ".) " + title)}
+            class="close-question__title">
     </legend>
     {
-        answers.map(async (answer, i) =>
-                <label for=`question_${i}`>
-                    <input type="radio" id=`question_${i}` value={answer.char}
-                           set:html={answer.char + ". " +await renderMath(answer.text)}
-                    name=`question`/>
+        answers.map((answer, i) =>
+                <label for=`question_${question_number}_${i}` class="answer">
+                    <span>{answer.char + ")"}</span>
+                    <input type="radio" id=`question_${question_number}_${i}`
+                           set:html={renderMath(answer.text)}
+                           name=`question_${question_number}` class="answer__input"/>
                 </label>
         )
     }

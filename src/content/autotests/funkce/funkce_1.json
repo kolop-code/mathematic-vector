@@ -4,23 +4,55 @@
   "questions": [
     {
       "type": "close",
-      "question": "Kolik ti je let?",
-      "order": 1,
+      "question": "Které z těchto předpisů jsou lineární funkce?",
+      "order": 3,
       "answers": [
         {
           "char": "a",
-          "text": "<18 let"
+          "text": "$f_1(x):\\sqrt{2x+1}$"
         },
         {
           "char": "b",
-          "text": "18-26 let"
+          "text": "$f_2(x):2x^2-4x+5$"
         },
         {
           "char": "c",
-          "text": ">26 let"
+          "text": "$f_3(x):\\frac{1}{2}x+3$"
+        },
+        {
+          "char": "d",
+          "text": "$f_4(x):\\log_2(x + 2)-1$"
         }
       ],
-      "right_answer": "b"
+      "right_answer": "c"
+    },
+    {
+      "type": "close",
+      "question": "Vypočítejte funkční hodnotu funkce $f(x):\\frac{4x^2-2x}{2x}+6$ pro $x=4$.",
+      "order": 4,
+      "answers": [
+        {
+          "char": "a",
+          "text": "$x=4$"
+        },
+        {
+          "char": "b",
+          "text": "$x=-1$"
+        },
+        {
+          "char": "c",
+          "text": "$x=8$"
+        },
+        {
+          "char": "d",
+          "text": "$x=13$"
+        },
+        {
+          "char": "e",
+          "text": "$x=\\frac{15}{2}$"
+        }
+      ],
+      "right_answer": "d"
     }
   ]
 }

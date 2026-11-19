@@ -1,0 +1,39 @@
+
+.autotest {
+    display: flex;
+    flex-direction: column;
+    gap: var(--space-m);
+}
+
+.autotest__submit {
+    margin: auto;
+
+}
+
+.close-question {
+    padding: var(--space-s) 0;
+    border-radius: var(--corner-radius-2);
+}
+
+.close-question__title {
+    font-size: var(--font-size-l);
+    margin-left: var(--space-s);
+}
+
+.answer {
+    display: flex;
+    gap: var(--space-xs);
+    padding: var(--space-2xs) var(--space-2xs) var(--space-2xs) var(--space-m);
+
+    & p {
+        padding-left: var(--space-xs);
+    }
+
+    & * {
+        font-size: var(--font-size-m);
+    }
+}
+
+.answer__title {
+
+}

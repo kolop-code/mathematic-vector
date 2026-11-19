@@ -1,13 +1,13 @@
 
 :root {
-    --primary-color: #239ef3;/*#7C0E44;*/
+    --primary-color: light-dark(#239ef3, #14608e);/*#7C0E44;*/
     --secondary-color: #0330ed;/*#AA5E7A;*/
 
-    --color-background: #ffffff;
+    --color-background: light-dark(#ffffff, #212125);
 
     --color-text-primary: #ffffff;/*#D49A9A;*/
     --color-text-secondary: #ffffff;/*#F2DACE;*/
-    --color-text-secondary-contrast: #000000;
+    --color-text-secondary-contrast: light-dark(#000, #fff);
 
     --color-text-hover: #b6b6b6;
 

@@ -1,11 +1,12 @@
 ---
-// import 'katex/dist/katex.min.css';
+//import 'katex/dist/katex.min.css';
 
 import { getCollection, render } from 'astro:content';
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
 import HeroBanner from "../../components/HeroBanner.astro";
 import List from '../../components/List.astro';
+import Sidebar from "../../components/Sidebar.astro";
 
 export async function getStaticPaths() {
     const topics = await getCollection('topics');
@@ -35,9 +36,9 @@ const {Content} = await render(topic);
             <Content />
         </article>
     </main>
-    <aside>
+    <Sidebar>
         <List short_variant={true} collection_name="topics"></List>
-    </aside>
+    </Sidebar>
     <footer>
 
     </footer>

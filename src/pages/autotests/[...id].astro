@@ -6,6 +6,7 @@ import List from "../../components/List.astro";
 import {getCollection} from "astro:content";
 import TitleH from "../../components/TitleH.astro";
 import Autotest from "../../components/Autotest.astro";
+import Sidebar from "../../components/Sidebar.astro";
 
 export async function getStaticPaths() {
     const autotests = await getCollection('autotests');
@@ -32,9 +33,9 @@ const {autotest} = Astro.props;
         <TitleH level={2}>{autotest.data.title}</TitleH>
         <Autotest autotests={autotest.data}></Autotest>
     </main>
-    <aside>
+    <Sidebar>
         <List short_variant={true} collection_name="autotests"></List>
-    </aside>
+    </Sidebar>
     <footer>
 
     </footer>

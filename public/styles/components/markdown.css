@@ -22,7 +22,7 @@
 }
 
 .markdown .katex-html {
-    display: none;
+    /*display: none;*/
 }
 
 .markdown .katex-mathml {

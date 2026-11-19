@@ -1,0 +1,87 @@
+@keyframes sidebarMoveIn {
+    0% {
+        left: -15rem;
+    }
+    100% {
+        left: 0;
+    }
+}
+
+@keyframes sidebarMoveOut {
+    0% {
+        left: 0;
+    }
+    100% {
+        left: -15rem;
+    }
+}
+
+.sidebar {
+    position: relative;
+    z-index: 20;
+}
+.sidebar__background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: black;
+    opacity: 0.5;
+    z-index: 10;
+    display: none;
+}
+
+#sidebar-menu {
+    opacity: 0;
+    position: absolute;
+    width: 1px;
+    height: 1px;
+}
+
+.sidebar__toggle {
+    display: none;
+    position: absolute;
+    align-self: center;
+    margin-left: auto;
+    left: 15rem;
+    top: calc(100vh - 2rem);
+    width: 2.5rem;
+    height: 2.5rem;
+    transform: translate(0, -100%);
+    padding: 0;
+    background: var(--primary-color);
+    z-index: 20;
+
+    & span {
+        color: var(--color-text-secondary);
+        position: absolute;
+        width: 100%;
+        height: 100%;
+    }
+}
+
+@media (width < 768px) {
+    .sidebar {
+        position: absolute;
+        padding: var(--space-xs);
+        height: 100vh;
+        width: 15rem;
+        animation-name: sidebarMoveOut;
+        animation-duration: 0.5s;
+        left: -15rem;
+        background: var(--color-background);
+    }
+
+    .sidebar:has(#sidebar-menu:checked) ~ .sidebar__background {
+        display: block;
+    }
+
+    .sidebar__toggle {
+        display: block;
+    }
+
+    .sidebar:has(#sidebar-menu:checked) {
+        animation-name: sidebarMoveIn;
+        animation-duration: 0.5s;
+        left: 0;
+    }
+}

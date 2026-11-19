@@ -36,6 +36,7 @@
     height: 2rem;
     align-self: center;
     margin-left: auto;
+    padding: 0;
 
     & span {
         color: var(--color-text-secondary);

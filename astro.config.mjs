@@ -5,6 +5,12 @@ import { unified } from '@astrojs/markdown-remark';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
 
+function testPlugin() {
+    return (/** @type {any} */ tree) => {
+        console.log("REMARK PLUGIN EXECUTED");
+    };
+}
+
 // https://astro.build/config
 export default defineConfig({
     site: "https://kolop-code.github.io",

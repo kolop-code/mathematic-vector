@@ -45,3 +45,34 @@ footer {
 .content-view footer {
     grid-area: footer;
 }
+
+.katex-html {
+    display: none;
+}
+
+.katex-mathml {
+    font-family: KaTeX_Math, math, sans-serif;
+}
+
+@media (prefers-color-scheme: dark) {
+    :root:not(:has(body.light-theme)) {
+        color-scheme: dark;
+    }
+}
+
+:root:has(body.dark-theme) {
+    color-scheme: dark;
+}
+
+@media (width < 768px) {
+    body.content-view {
+        display: grid;
+        grid-template-areas: "header header" "main main" "footer footer";
+        grid-template-columns: 19rem 1fr;
+        grid-template-rows: auto 1fr auto;
+    }
+
+    .content-view main {
+        padding: 0 2.5%;
+    }
+}

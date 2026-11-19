@@ -10,5 +10,7 @@
 @import url(components/hero-banner.css) layer(components);
 @import url(components/list.css) layer(components);
 @import url(components/markdown.css) layer(components);
+@import url(components/autotest.css) layer(components);
+@import url(components/sidebar.css) layer(components);
 @import url(utilities.css) layer(utilities);
 @import url(theme/theme-1.css) layer(theme);

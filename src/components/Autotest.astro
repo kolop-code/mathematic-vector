@@ -2,22 +2,26 @@
 import type {Schema} from "../../public/ts/Utilities.ts";
 import CloseQuestion from "./CloseQuestion.astro";
 
-interface Props{
+interface Props {
     autotests: Schema
 }
 
 const {autotests} = Astro.props;
 
-function checkString(str1: string, str2: string){
+function checkString(str1: string, str2: string) {
     return str1 === str2
 }
-
 ---
 
-<form>
+<form class="autotest">
     {
         autotests.questions?.map((dat, i) =>
-            (checkString(dat.type, "close") && (<CloseQuestion title={dat.question} answers={dat.answers} />))
+            (checkString(dat.type, "close") && (
+                    <CloseQuestion
+                            title={dat.question}
+                            answers={dat.answers}
+                            question_number={i}/>))
         )
     }
+    <button class="autotest__submit btn btn--contrast">Vyhodnotit</button>
 </form>

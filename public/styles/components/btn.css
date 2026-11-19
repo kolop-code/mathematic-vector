@@ -2,4 +2,18 @@
 .btn {
     border-radius: var(--corner-radius-1);
     border: var(--border-width-2) solid var(--color-border-primary);
+    padding: var(--space-xs);
+    cursor: pointer;
+}
+
+.btn--contrast {
+    border-radius: var(--corner-radius-3);
+    background: var(--primary-color);
+    color: var(--color-text-primary);
+}
+
+.btn--sidebar {
+    border-top-right-radius: 100%;
+    border-bottom-right-radius: 100%;
+    border-left: none;
 }
