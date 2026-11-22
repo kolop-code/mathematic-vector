@@ -1,0 +1,30 @@
+{
+  "title": "Rovnice 1",
+  "order": 1,
+  "questions": [
+    {
+      "type": "close",
+      "question": "Vyřešte danou rovnici $2x-\\frac{x}{2}+4=x+\\frac{x}{3}$",
+      "order": 1,
+      "answers": [
+        {
+          "char": 1,
+          "text": "$x=-24$"
+        },
+        {
+          "char": 2,
+          "text": "$x=24$"
+        },
+        {
+          "char": 3,
+          "text": "$x=\\frac{3}{24}$"
+        },
+        {
+          "char": 4,
+          "text": "$x=-\\frac{5}{12}$"
+        }
+      ],
+      "right_answer": 1
+    }
+  ]
+}

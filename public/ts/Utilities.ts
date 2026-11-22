@@ -36,7 +36,7 @@ export const schema = z.object({
             order: z.number(),
             answers: z.array(
                 z.object({
-                    char: z.string(),
+                    char: z.number(),
                     text: z.string()
                 })
             )

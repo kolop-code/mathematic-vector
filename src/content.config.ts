@@ -6,7 +6,7 @@ import {schema} from "../public/ts/Utilities.ts";
 const topics = defineCollection({
     loader: glob({
         pattern: '**/*.{md,json}',
-        base: './src/content/topics'
+        base: './public/content/topics'
     }),
 
     schema: z.object({
@@ -18,7 +18,7 @@ const topics = defineCollection({
 const autotests = defineCollection({
     loader: glob({
         pattern: '**/*.json',
-        base: "./src/content/autotests"
+        base: "./public/content/autotests"
     }),
 
     schema: schema

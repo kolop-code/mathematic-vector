@@ -8,23 +8,23 @@
       "order": 3,
       "answers": [
         {
-          "char": "a",
+          "char": 1,
           "text": "$f_1(x):\\sqrt{2x+1}$"
         },
         {
-          "char": "b",
+          "char": 2,
           "text": "$f_2(x):2x^2-4x+5$"
         },
         {
-          "char": "c",
+          "char": 3,
           "text": "$f_3(x):\\frac{1}{2}x+3$"
         },
         {
-          "char": "d",
+          "char": 4,
           "text": "$f_4(x):\\log_2(x + 2)-1$"
         }
       ],
-      "right_answer": "c"
+      "right_answer": 3
     },
     {
       "type": "close",
@@ -32,27 +32,27 @@
       "order": 4,
       "answers": [
         {
-          "char": "a",
+          "char": 1,
           "text": "$x=4$"
         },
         {
-          "char": "b",
+          "char": 2,
           "text": "$x=-1$"
         },
         {
-          "char": "c",
+          "char": 3,
           "text": "$x=8$"
         },
         {
-          "char": "d",
+          "char": 4,
           "text": "$x=13$"
         },
         {
-          "char": "e",
+          "char": 5,
           "text": "$x=\\frac{15}{2}$"
         }
       ],
-      "right_answer": "d"
+      "right_answer": 4
     }
   ]
 }

@@ -24,7 +24,7 @@ const classes_list = classes === undefined ? [] : classes.split(" ");
     <meta name="generator" content={Astro.generator}/>
     <title>Mathematics Vector</title>
 </head>
-<body class:list={classes_list}>
+<body class:list={classes_list} data-base-url={import.meta.env.BASE_URL}>
 <slot/>
 </body>
 </html>

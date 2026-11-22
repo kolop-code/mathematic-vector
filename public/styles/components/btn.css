@@ -1,9 +1,13 @@
 
 .btn {
     border-radius: var(--corner-radius-1);
-    border: var(--border-width-2) solid var(--color-border-primary);
+    border: none;
     padding: var(--space-xs);
     cursor: pointer;
+}
+
+.btn--border {
+    border: var(--border-width-2) solid var(--color-border-primary);
 }
 
 .btn--contrast {
@@ -13,7 +17,6 @@
 }
 
 .btn--sidebar {
-    border-top-right-radius: 100%;
-    border-bottom-right-radius: 100%;
     border-left: none;
+    border-radius: 0 100% 100% 0;
 }

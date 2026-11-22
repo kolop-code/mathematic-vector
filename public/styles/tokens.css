@@ -14,6 +14,9 @@
     --color-border-primary: #ffffff;/*#F2DACE;*/
     --color-border-secondary: var(--primary-color);
 
+    --color-incorrect: #c60505;
+    --color-correct: #07d107;
+
     --font-title-h1: "Russo One";
     --font-primary: Arial, Helvetica;
 

@@ -2,7 +2,7 @@
 import {renderMath} from "../../public/ts/Utilities.ts";
 
 interface Answer {
-    char: string,
+    char: number,
     text: string
 }
 
@@ -15,9 +15,9 @@ interface Props {
 const {title, answers, question_number} = Astro.props;
 ---
 
-<fieldset class="close-question">
+<fieldset class="question" data-question={question_number}>
     <legend set:html={renderMath((question_number + 1) + ".) " + title)}
-            class="close-question__title">
+            class="question__title">
     </legend>
     {
         answers.map((answer, i) =>
@@ -25,7 +25,8 @@ const {title, answers, question_number} = Astro.props;
                     <span>{answer.char + ")"}</span>
                     <input type="radio" id=`question_${question_number}_${i}`
                            set:html={renderMath(answer.text)}
-                           name=`question_${question_number}` class="answer__input"/>
+                           name=`question_${question_number}` class="answer__input"
+                           data-answer={i+1}/>
                 </label>
         )
     }
