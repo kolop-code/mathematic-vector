@@ -40,7 +40,7 @@
 .u-hidden {
     visibility: hidden;
 }
-/* padding up bottom */
+/* padding up and bottom */
 .u-pub-2xs {
     padding: var(--space-2xs) 0;
 }

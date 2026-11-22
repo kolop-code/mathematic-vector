@@ -1,0 +1,27 @@
+---
+
+interface Props {
+    title: string;
+}
+
+const { title } = Astro.props;
+
+---
+
+<span class="result__background u-hidden" id="result-bg" />
+<div class="result u-hidden" id="result">
+    <h3 class="result__title u-center">{title}</h3>
+    <span class="result__progressbar">
+        <span class="result__bar" id="result__bar"></span>
+        <span class="result__success-rate u-center" id="result__success-rate">50%</span>
+    </span>
+    <div class="result__stats">
+        <div class="result__stat">Správné odpověďi:</div>
+        <div class="result__stat-value u-center" id="result__correct-answers">5</div>
+        <div class="result__stat">Špatné odpověďi:</div>
+        <div class="result__stat-value u-center" id="result__incorrect-answers">3</div>
+        <div class="result__stat">Body:</div>
+        <div class="result__stat-value u-center" id="result__points">5/3</div>
+    </div>
+    <a class="result__return btn btn--contrast" href=`${import.meta.env.BASE_URL}autotests/`>Zpět</a>
+</div>

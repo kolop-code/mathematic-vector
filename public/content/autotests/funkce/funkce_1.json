@@ -6,6 +6,7 @@
       "type": "close",
       "question": "Které z těchto předpisů jsou lineární funkce?",
       "order": 3,
+      "points": 2,
       "answers": [
         {
           "char": 1,
@@ -30,6 +31,7 @@
       "type": "close",
       "question": "Vypočítejte funkční hodnotu funkce $f(x):\\frac{4x^2-2x}{2x}+6$ pro $x=4$.",
       "order": 4,
+      "points": 1,
       "answers": [
         {
           "char": 1,

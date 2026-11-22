@@ -1,9 +1,13 @@
-
+/* TODO: try to merge btn and action-btn components into one */
 .btn {
     border-radius: var(--corner-radius-1);
     border: none;
     padding: var(--space-xs);
     cursor: pointer;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
 }
 
 .btn--border {
