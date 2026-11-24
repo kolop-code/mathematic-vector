@@ -14,9 +14,17 @@
     border-radius: var(--corner-radius-2);
 }
 
+.question__title-container {
+    margin-left: var(--space-s);
+    display: flex;
+}
+
+.question__points {
+    margin-left: var(--space-m);
+}
+
 .question__title {
     font-size: var(--font-size-l);
-    margin-left: var(--space-s);
 }
 
 .answer {

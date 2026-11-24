@@ -1,0 +1,25 @@
+---
+
+interface Props {
+    title: string,
+    descriptions: string,
+    tags?: string[],
+    href: string
+}
+
+const { title, descriptions, tags, href } = Astro.props;
+
+---
+
+<div class="card">
+    <h3 class="card__title">{title}</h3>
+    <div class="card__description">{descriptions}</div>
+    <div class="card__container">
+        {
+            tags?.map((tag, i) =>
+                <div class="card__tag u-center">{tag}</div>
+            )
+        }
+        <a class="card__action btn btn--border" href={import.meta.env.BASE_URL + href}>Přejít</a>
+    </div>
+</div>

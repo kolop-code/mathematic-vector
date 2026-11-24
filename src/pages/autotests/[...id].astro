@@ -1,7 +1,6 @@
 ---
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import HeroBanner from "../../components/HeroBanner.astro";
 import List from "../../components/List.astro";
 import {getCollection} from "astro:content";
 import TitleH from "../../components/TitleH.astro";
@@ -26,9 +25,6 @@ const {autotest} = Astro.props;
 ---
 
 <BaseLayout classes="content-view">
-    <header>
-        <HeroBanner></HeroBanner>
-    </header>
     <main>
         <TitleH level={2}>{autotest.data.title}</TitleH>
         <Autotest autotests={autotest.data}></Autotest>
@@ -36,7 +32,4 @@ const {autotest} = Astro.props;
     <Sidebar>
         <List short_variant={true} collection_name="autotests"></List>
     </Sidebar>
-    <footer>
-
-    </footer>
 </BaseLayout>

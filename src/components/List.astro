@@ -10,6 +10,7 @@ interface Props {
 const {short_variant, collection_name} = Astro.props;
 
 class Section {
+    section_name!: string;
     topic_name!: string;
     data!: { title: string, order: number, id: string }[];
     order!: number
@@ -31,6 +32,7 @@ for (let topic1 of topics) {
     let section = new Section();
     section.topic_name = topic1.data.title;
     section.order = topic1.data.order;
+    section.section_name = topic_name
 
     for (let topic2 of topics) {
         const parts2 = topic2.id.split("/");
@@ -62,7 +64,8 @@ const card_attributes = {"open": !short_variant}
             <details {...card_attributes} class:list={
                 ["list__card",
                     {"list__card--short": short_variant}
-                ]}>
+                ]}
+            id={item.section_name}>
                 <summary class:list={
                     ["list__card-title",
                         {"list__card-title--short": short_variant}]

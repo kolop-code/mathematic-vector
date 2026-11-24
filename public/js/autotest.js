@@ -30,23 +30,38 @@ function EvaluateAutotest(data) {
 
     questions.forEach((question, i) => {
         const question_data = data.questions[i];
+        const type = question_data.type.toLowerCase();
         let answers = question.querySelectorAll('.answer');
 
         max_points += question_data.points;
+
         answers.forEach((answer, j) => {
-            // const answer_data = question_data.answers[j];
             let input = answer.querySelector("input");
 
-            if (input.dataset.answer == question_data.right_answer && input.checked) {
-                answer.classList.add("answer--correct");
-                right_answers += 1;
-                points += question_data.points;
-            } else if (input.dataset.answer == question_data.right_answer && !input.checked) {
-                answer.classList.add("answer--right");
-            }
+            if (type === "close") {
+                if (input.dataset.answer == question_data.right_answer && input.checked) {
+                    answer.classList.add("answer--correct");
+                    right_answers += 1;
+                    points += question_data.points;
+                } else if (input.dataset.answer == question_data.right_answer && !input.checked) {
+                    answer.classList.add("answer--right");
+                }
 
-            if (input.dataset.answer != question_data.right_answer && input.checked) {
-                answer.classList.add("answer--incorrect");
+                if (input.dataset.answer != question_data.right_answer && input.checked) {
+                    answer.classList.add("answer--incorrect");
+                }
+            } else if (type === "multiple") {
+                if (question_data.right_answer.includes(Number(input.dataset.answer)) && input.checked) {
+                    answer.classList.add("answer--correct");
+                    //right_answers += 1; TODO: calculate if question is correct whole
+                    points += question_data.points / question_data.right_answer.length;
+                } else if (question_data.right_answer.includes(Number(input.dataset.answer)) && !input.checked) {
+                    answer.classList.add("answer--right");
+                }
+
+                if (!question_data.right_answer.includes(Number(input.dataset.answer)) && input.checked) {
+                    answer.classList.add("answer--incorrect");
+                }
             }
         })
     })
@@ -62,5 +77,5 @@ function EvaluateAutotest(data) {
     result_correct_answers.innerHTML = right_answers;
     result_incorrect_answers.innerHTML = questions.length - right_answers;
 
-    result_points.innerHTML = points + " / " + max_points;
+    result_points.innerHTML = points.toFixed(2) + " / " + max_points;
 }

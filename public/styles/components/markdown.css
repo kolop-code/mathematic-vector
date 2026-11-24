@@ -31,17 +31,16 @@
 
 .markdown h1 {
     font-size: var(--font-size-xxl);
+    padding: var(--space-m) 0;
 }
 
 .markdown h2 {
     font-size: var(--font-size-xl);
+    padding: var(--space-m) 0;
 }
 
 .markdown h3 {
     font-size: var(--font-size-l);
-}
-
-.markdown h1, h2, h3 {
     padding: var(--space-m) 0;
 }
 

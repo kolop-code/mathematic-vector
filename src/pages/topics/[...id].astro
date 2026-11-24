@@ -4,7 +4,6 @@
 import { getCollection, render } from 'astro:content';
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import HeroBanner from "../../components/HeroBanner.astro";
 import List from '../../components/List.astro';
 import Sidebar from "../../components/Sidebar.astro";
 
@@ -28,9 +27,6 @@ const {Content} = await render(topic);
 ---
 
 <BaseLayout classes="content-view">
-    <header>
-        <HeroBanner></HeroBanner>
-    </header>
     <main>
         <article class="markdown">
             <Content />
@@ -39,7 +35,4 @@ const {Content} = await render(topic);
     <Sidebar>
         <List short_variant={true} collection_name="topics"></List>
     </Sidebar>
-    <footer>
-
-    </footer>
 </BaseLayout>

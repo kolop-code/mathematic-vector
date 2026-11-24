@@ -26,6 +26,35 @@
         }
       ],
       "right_answer": 1
+    },
+    {
+      "type": "multiple",
+      "question": "Do kterých intervalů spadá řešení této rovnice $3x^2=6x$",
+      "order": 2,
+      "points": 2,
+      "answers": [
+        {
+          "char": 1,
+          "text": "$(-\\infty, \\infty)$"
+        },
+        {
+          "char": 2,
+          "text": "$(0, 2)$"
+        },
+        {
+          "char": 3,
+          "text": "$(0, 2>$"
+        },
+        {
+          "char": 4,
+          "text": "$<0, \\infty)$"
+        },
+        {
+          "char": 5,
+          "text": "$<0, 2>$"
+        }
+      ],
+      "right_answer": [1, 4, 5]
     }
   ]
 }

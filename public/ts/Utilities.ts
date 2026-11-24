@@ -42,7 +42,12 @@ export const schema = z.object({
                 })
             )
         })
-    ).optional()
+    ).optional(),
+    right_answer: z.number().optional() || z.array(z.number()).optional()
 })
 
 export type Schema = z.infer<typeof schema>;
+
+export function checkString(str1: string, str2: string) {
+    return str1 === str2
+}

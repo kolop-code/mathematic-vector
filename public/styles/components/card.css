@@ -1,0 +1,45 @@
+
+.card {
+    background: var(--primary-color);
+    border-radius: var(--corner-radius-2);
+    display: flex;
+    flex-direction: column;
+    flex: 0 1 250px;
+}
+
+.card__title {
+    padding: var(--space-s);
+    color: var(--color-text-primary);
+}
+
+.card__description {
+    padding: 0 var(--space-s);
+    color: var(--color-text-primary);
+    flex: 1;
+}
+
+.card__container {
+    display: flex;
+    padding: var(--space-s);
+}
+
+.card__action {
+    margin-left: auto;
+}
+
+.card__tag {
+    border-radius: var(--corner-radius-2);
+    padding: var(--space-2xs) var(--space-xs);
+    height: fit-content;
+    background: var(--color-background);
+    color: var(--color-text-secondary-contrast);
+    margin-top: auto;
+}
+
+@container hero-banner__grid (width < 500px) {
+    .card__title {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}

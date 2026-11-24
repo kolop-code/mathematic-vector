@@ -1,21 +1,25 @@
 ---
 
+import list from "../../public/content/hero-banner/list.json"
+import Card from "./Card.astro";
+
 ---
 
 <div class="hero-banner">
-    <h1 class="hero-banner__title"><a class="action-btn" href=`${import.meta.env.BASE_URL}`>Vector</a></h1>
-    <input type="checkbox" id="hamburger-menu" aria-label="Hlavní menu">
-    <label for="hamburger-menu" class="hero-banner__menu-toggle btn btn--border">
-        <span class="u-center" aria-hidden="true">☰</span>
-    </label>
-    <nav class="hero-banner__navbar">
-        <ul class="hero-banner__list">
-            <li><a class="hero-banner__action action-btn u-center"
-                   href=`${import.meta.env.BASE_URL}topics/`>Témata</a>
-            </li>
-            <li><a class="hero-banner__action action-btn u-center"
-                   href=`${import.meta.env.BASE_URL}autotests/`>Autotesty</a>
-            </li>
-        </ul>
-    </nav>
+    <h2 class="hero-banner__title u-center">Matematika pro střední školy</h2>
+    <ul class="hero-banner__list">
+        <li class="u-center">Všechny materiály na jednom místě</li>
+        <li class="u-center">Možnost ověření znalostí autotesty</li>
+    </ul>
+    <div class="hero-banner__grid">
+        {
+            list.map((object, i) =>
+                <Card title={object.title}
+                      descriptions={object.description}
+                      tags={object.tags}
+                      href={object.href}
+                      />
+            )
+        }
+    </div>
 </div>

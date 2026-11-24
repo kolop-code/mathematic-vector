@@ -1,21 +1,14 @@
 ---
 
 import BaseLayout from "../../layouts/BaseLayout.astro";
-import HeroBanner from "../../components/HeroBanner.astro";
 import TitleH from "../../components/TitleH.astro";
 import List from "../../components/List.astro";
 
 ---
 
 <BaseLayout>
-    <header>
-        <HeroBanner></HeroBanner>
-    </header>
     <main>
         <TitleH level={2} classes={"u-pub-m"}>Témata</TitleH>
         <List short_variant={false} collection_name="topics"></List>
     </main>
-    <footer>
-
-    </footer>
 </BaseLayout>

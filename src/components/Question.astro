@@ -1,0 +1,47 @@
+---
+import {checkString, renderMath} from "../../public/ts/Utilities.ts";
+
+interface Answer {
+    char: number,
+    text: string
+}
+
+interface Props {
+    title: string,
+    question_number: number,
+    answers: Answer[],
+    question_type: string,
+    points: number
+}
+
+const {title, answers, question_number, question_type, points} = Astro.props;
+---
+
+<fieldset class="question" data-question={question_number}>
+    <legend
+            class="question__title-container">
+        <div class="question__title" set:html={renderMath((question_number + 1) + ".) " + title)} />
+        <div class="question__points u-center">{"(" + points + " body)"}</div>
+    </legend>
+    {
+        checkString(question_type, "close") && answers.map((answer, i) =>
+                <label for=`question_${question_number}_${i}` class="answer">
+                    <span>{answer.char + ")"}</span>
+                    <input type="radio" id=`question_${question_number}_${i}`
+                           set:html={renderMath(answer.text)}
+                           name=`question_${question_number}` class="answer__input"
+                           data-answer={i+1}/>
+                </label>
+        )}
+    {
+        checkString(question_type, "multiple") && answers.map((answer, i) =>
+                    <label for=`question_${question_number}_${i}` class="answer">
+                        <span>{answer.char + ")"}</span>
+                        <input type="checkbox" id=`question_${question_number}_${i}`
+                               set:html={renderMath(answer.text)}
+                               name=`question_${question_number}` class="answer__input"
+                               data-answer={i+1}/>
+                    </label>
+        )
+    }
+</fieldset>
